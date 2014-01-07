@@ -1,4 +1,4 @@
-include(
+include ':gradle-android-project',
         ':libraries:sample-library',
         ':libraries:sample-jni-library'
-), 'gradle-android-project'
+
