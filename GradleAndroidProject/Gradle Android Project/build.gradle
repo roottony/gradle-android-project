@@ -1,11 +1,6 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:0.7.3'
-    }
-}
+group = "com.roottony"
+version = "1.0"
+
 apply plugin: 'android'
 
 repositories {
@@ -18,6 +13,8 @@ dependencies {
     compile 'com.google.code.gson:gson:2.2.4'
     compile files('libs/volley.jar')
     compile project(':libraries:sample-library')
+    compile project(':libraries:sample-jni-library')
+    compile project(':libraries:sample-so-library')
 }
 
 android {
@@ -30,7 +27,7 @@ android {
     }
     buildTypes {
 release {
-    runProguard false
+runProguard false
 }
     }
     productFlavors {

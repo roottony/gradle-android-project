@@ -1,24 +1,29 @@
 package com.roottony.gradleandroidproject;
 
 import android.os.Bundle;
-import android.util.Log;
+import android.widget.TextView;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.roottony.hellojni.lib.HelloJni;
 import com.google.gson.Gson;
 import com.roottony.gradleandroidlibrary.HelloLibraryProject;
+import com.roottony.helloso.HelloSo;
 
 public class MainActivity extends SherlockFragmentActivity {
-
-    private static final String TAG = MainActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_main);
+        setContentView(R.layout.activity_main);
 
-        new HelloLibraryProject().sayHello(this);
+        getTextViewById(R.id.hello_from_project).setText(" ");
+        getTextViewById(R.id.hello_from_library_project).setText(new HelloLibraryProject().sayHello());
+        getTextViewById(R.id.hello_from_artifact_jar).setText(new Gson().toJson("Hello from GSON!"));
+        getTextViewById(R.id.hello_from_jni).setText("JNI name is " + new HelloJni().jniNameFromJNI());
+        getTextViewById(R.id.hello_from_so).setText(new HelloSo().helloFromSoLibrary());
+    }
 
-        Gson gson = new Gson();
-        Log.i(TAG, gson.toJson("Hello from GSON!"));
+    private TextView getTextViewById(int textViewId) {
+        return (TextView) findViewById(textViewId);
     }
 
 }
