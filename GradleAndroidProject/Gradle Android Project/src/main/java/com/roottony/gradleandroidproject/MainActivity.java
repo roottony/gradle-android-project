@@ -3,6 +3,7 @@ package com.roottony.gradleandroidproject;
 import android.os.Bundle;
 import android.widget.TextView;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.roottony.gradleandroidmaven.HelloMavenLibrary;
 import com.roottony.hellojni.lib.HelloJni;
 import com.google.gson.Gson;
 import com.roottony.gradleandroidlibrary.HelloLibraryProject;
@@ -20,6 +21,7 @@ public class MainActivity extends SherlockFragmentActivity {
         getTextViewById(R.id.hello_from_artifact_jar).setText(new Gson().toJson("Hello from GSON!"));
         getTextViewById(R.id.hello_from_jni).setText("JNI name is " + new HelloJni().jniNameFromJNI());
         getTextViewById(R.id.hello_from_so).setText(new HelloSo().helloFromSoLibrary());
+        getTextViewById(R.id.hello_from_local_repo).setText(new HelloMavenLibrary().sayHello());
     }
 
     private TextView getTextViewById(int textViewId) {

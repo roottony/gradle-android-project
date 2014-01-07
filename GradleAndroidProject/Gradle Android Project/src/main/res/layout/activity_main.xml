@@ -59,4 +59,16 @@
         android:id="@+id/hello_from_so"
         style="@style/MainScreenEntryValue"
         android:layout_alignBottom="@id/hello_from_so_title"/>
+
+
+    <TextView
+        android:id="@+id/hello_from_local_repo_title"
+        style="@style/MainScreenEntryTitle"
+        android:layout_below="@id/hello_from_so_title"
+        android:text="@string/hello_from_local_repo_title"/>
+
+    <TextView
+        android:id="@+id/hello_from_local_repo"
+        style="@style/MainScreenEntryValue"
+        android:layout_alignBottom="@id/hello_from_local_repo_title"/>
 </RelativeLayout>

@@ -9,5 +9,6 @@
     <string name="hello_from_artifact_jar_title">Maven jar artifact dependency:</string>
     <string name="hello_from_jni_title">Native code:</string>
     <string name="hello_from_so_title">.so library:</string>
+    <string name="hello_from_local_repo_title">Local repo lib:</string>
 
 </resources>

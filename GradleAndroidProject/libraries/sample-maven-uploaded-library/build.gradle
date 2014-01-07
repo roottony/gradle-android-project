@@ -17,3 +17,17 @@ android {
         targetSdkVersion 19
     }
 }
+
+// Add local folder as repository
+repositories {
+    flatDir { 
+        name "sampleRepo" 
+        dirs "${rootProject.projectDir}/sampleRepo" 
+    }
+}
+
+uploadArchives {
+    repositories {
+        add project.repositories.sampleRepo
+    }
+}
