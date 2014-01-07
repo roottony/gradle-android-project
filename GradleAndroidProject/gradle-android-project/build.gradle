@@ -41,6 +41,17 @@ android {
     productFlavors {
         defaultFlavor {
             proguardFile 'proguard-rules.txt'
+            buildConfigField "boolean", "ADS_ENABLED", "true"
+        }
+
+        free {
+            packageName 'com.roottony.gradleandroidproject.free'
+        }
+
+        paid {
+            packageName 'com.roottony.gradleandroidproject.paid'
+            
+            buildConfigField "boolean", "ADS_ENABLED", "false"
         }
     }
 }
