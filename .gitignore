@@ -35,3 +35,6 @@ build/
 
 # OSX files
 .DS_Store
+
+# Repository files
+sampleRepo/

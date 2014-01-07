@@ -1,6 +1,7 @@
 group = "com.roottony"
 version = "1.0"
 
+apply plugin: 'maven'
 apply plugin: 'android-library'
 
 dependencies {
@@ -14,5 +15,19 @@ android {
     defaultConfig {
         minSdkVersion 10
         targetSdkVersion 19
+    }
+}
+
+// Add local folder as repository
+repositories {
+    flatDir { 
+        name "sampleRepo" 
+        dirs "${rootProject.projectDir}/sampleRepo" 
+    }
+}
+
+uploadArchives {
+    repositories {
+        add mavenLocal()
     }
 }
