@@ -8,9 +8,10 @@ android {
     buildToolsVersion "18.0.1"
 
     // Output so libraries are added as .so libs. Uncomment this to regenerate .so libs.
-//    defaultConfig {
-//        ndk {
-//            moduleName "hello-so"
-//        }
-//    }
+    defaultConfig {
+        ndk {
+            moduleName "hello-so"
+            stl "stlport_static"
+        }
+    }
 }
