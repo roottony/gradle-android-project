@@ -1,7 +1,5 @@
 include(
     ':Gradle Android Project', 
     ':libraries:sample-library', 
-    ':libraries:sample-jni-library', 
-    ':libraries:sample-so-library', 
-    ':libraries:sample-maven-uploaded-library'
+    ':libraries:sample-jni-library'
 )

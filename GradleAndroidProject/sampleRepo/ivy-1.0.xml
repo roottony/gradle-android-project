@@ -4,7 +4,7 @@
 		module="sample-maven-uploaded-library"
 		revision="1.0"
 		status="integration"
-		publication="20140107173737"
+		publication="20140107194519"
 	/>
 	<configurations>
 		<conf name="_debugApk" visibility="public" extends="apk,debugApk"/>

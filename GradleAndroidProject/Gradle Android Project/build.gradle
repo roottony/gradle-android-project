@@ -15,7 +15,6 @@ dependencies {
     compile files('libs/volley.jar')
     compile project(':libraries:sample-library')
     compile project(':libraries:sample-jni-library')
-    //compile project(':libraries:sample-so-library')
     compile 'com.roottony:sample-maven-uploaded-library:1.0@aar'
 }
 

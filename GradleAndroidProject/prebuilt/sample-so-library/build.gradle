@@ -1,13 +1,21 @@
 group = "com.roottony"
 version = "1.0"
 
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.7.3'
+    }
+}
+
 apply plugin: 'android-library'
 
 android {
     compileSdkVersion 19
     buildToolsVersion "18.0.1"
 
-    // Output so libraries are added as .so libs. Uncomment this to regenerate .so libs.
     defaultConfig {
         ndk {
             moduleName "hello-so"
