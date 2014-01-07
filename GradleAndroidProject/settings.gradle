@@ -1,5 +1,4 @@
 include(
-    ':Gradle Android Project', 
-    ':libraries:sample-library', 
-    ':libraries:sample-jni-library'
-)
+        ':libraries:sample-library',
+        ':libraries:sample-jni-library'
+), 'gradle-android-project'
