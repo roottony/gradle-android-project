@@ -22,6 +22,7 @@ public class MainActivity extends SherlockFragmentActivity {
         getTextViewById(R.id.hello_from_jni).setText("JNI name is " + new HelloJni().jniNameFromJNI());
         getTextViewById(R.id.hello_from_so).setText(new HelloSo().helloFromSoLibrary());
         getTextViewById(R.id.hello_from_local_repo).setText(new HelloMavenLibrary().sayHello());
+        getTextViewById(R.id.hello_from_build_config).setText("Ads enabled: " + BuildConfig.ADS_ENABLED);
     }
 
     private TextView getTextViewById(int textViewId) {

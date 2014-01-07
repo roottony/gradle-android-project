@@ -71,4 +71,16 @@
         android:id="@+id/hello_from_local_repo"
         style="@style/MainScreenEntryValue"
         android:layout_alignBottom="@id/hello_from_local_repo_title"/>
+
+    <TextView
+        android:id="@+id/hello_from_build_config_title"
+        style="@style/MainScreenEntryTitle"
+        android:layout_below="@id/hello_from_local_repo_title"
+        android:text="@string/hello_from_build_config_title"/>
+
+    <TextView
+        android:id="@+id/hello_from_build_config"
+        style="@style/MainScreenEntryValue"
+        android:layout_alignBottom="@id/hello_from_build_config_title"/>
+
 </RelativeLayout>
