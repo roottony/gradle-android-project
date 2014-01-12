@@ -1,16 +1,11 @@
 package com.roottony.gradleandroidlibrary;
 
-import android.content.Context;
-import android.util.Log;
-import android.widget.Toast;
-
 public class HelloLibraryProject {
 
-    private static final String TAG = HelloLibraryProject.class.getSimpleName();
+    private final static String HELLO_MESSAGE = "Hello from library project!";
 
-    public void sayHello(Context context) {
-        Log.i(TAG, "Hello from gradle library project!");
-        Toast.makeText(context, R.string.library_resource_string, Toast.LENGTH_LONG).show();
+    public String sayHello() {
+        return HELLO_MESSAGE;
     }
 
 }

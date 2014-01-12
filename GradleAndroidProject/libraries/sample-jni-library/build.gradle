@@ -1,0 +1,16 @@
+group = "com.roottony"
+version = "1.0"
+
+apply plugin: 'android-library'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "18.0.1"
+
+    defaultConfig {
+        ndk {
+            moduleName "hello-jni"
+            stl "stlport_static"
+        }
+    }
+}

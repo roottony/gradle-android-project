@@ -1,0 +1,60 @@
+group = "com.roottony"
+version = "1.0"
+
+apply plugin: 'android'
+
+repositories {
+    mavenCentral()
+    flatDir { dirs "../sampleRepo"}
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:18.0.+'
+    compile 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile files('libs/volley.jar')
+    compile project(':libraries:sample-library')
+    compile project(':libraries:sample-jni-library')
+    compile 'com.roottony:sample-maven-uploaded-library:1.0@aar'
+}
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion '19.0.1'
+
+    defaultConfig {
+        minSdkVersion 10
+        targetSdkVersion 19
+    }
+
+    buildTypes {
+        release {
+            runProguard false
+        }
+        debug {
+            zipAlign true
+            versionNameSuffix "-debug"
+            packageNameSuffix ".debug"
+        }
+    }
+
+    productFlavors {
+        defaultFlavor {
+            proguardFile 'proguard-rules.txt'
+
+            buildConfigField "boolean", "ADS_ENABLED", "true"
+        }
+
+        free {
+            packageName 'com.roottony.gradleandroidproject.free'
+
+            buildConfigField "boolean", "ADS_ENABLED", "true"
+        }
+
+        paid {
+            packageName 'com.roottony.gradleandroidproject.paid'
+            
+            buildConfigField "boolean", "ADS_ENABLED", "false"
+        }
+    }
+}

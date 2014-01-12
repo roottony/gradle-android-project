@@ -1,0 +1,25 @@
+group = "com.roottony"
+version = "1.0"
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.7.3'
+    }
+}
+
+apply plugin: 'android-library'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "18.0.1"
+
+    defaultConfig {
+        ndk {
+            moduleName "hello-so"
+            stl "stlport_static"
+        }
+    }
+}
